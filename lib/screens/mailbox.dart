@@ -15,15 +15,15 @@ class MailBoxScreen extends StatelessWidget {
       body: Column(
         children: [
 
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 left: 10,
                 top: 80,
                 bottom: 10,
               ),
-              child: const Text(
+              child: Text(
                 "Mailbox",
                 style: TextStyle(
                   color: Colors.black,
@@ -37,7 +37,7 @@ class MailBoxScreen extends StatelessWidget {
             padding: EdgeInsets.zero,
             shrinkWrap: true,
             itemCount: 8,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, crossAxisSpacing: 10, mainAxisExtent: 160),
             itemBuilder: (context, index) => GestureDetector(
               onTap: () {

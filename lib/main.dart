@@ -50,43 +50,41 @@ class MyHomePage extends StatelessWidget {
           ),
           child: Obx(() => controller.screens[controller.index.value])),
 
-      bottomNavigationBar: Container(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              height: 12,
-              width: double.infinity,
-              color: Color(0xFF252526).withOpacity(0.2),
-            ),
-            Obx(() => BottomNavigationBar(
-                  currentIndex: controller.index.value,
-                  onTap: (value) {
-                    if (value != 2) {
-                      controller.index.value = value;
-                    } else {
-                      controller.showActionSheet(context);
-                    }
-                  },
-                  items: List.generate(
-                    3,
-                    (index) => BottomNavigationBarItem(
-                      icon: Image.asset(
-                        "assets/bottom/$index.png",
-                        height: 56,
-                        width: 56,
-                      ),
-                      activeIcon: Image.asset(
-                        "assets/bottom/$index$index.png",
-                        height: 59,
-                        width: 59,
-                      ),
-                      label: "",
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            height: 12,
+            width: double.infinity,
+            color: const Color(0xFF252526).withOpacity(0.2),
+          ),
+          Obx(() => BottomNavigationBar(
+                currentIndex: controller.index.value,
+                onTap: (value) {
+                  if (value != 2) {
+                    controller.index.value = value;
+                  } else {
+                    controller.showActionSheet(context);
+                  }
+                },
+                items: List.generate(
+                  3,
+                  (index) => BottomNavigationBarItem(
+                    icon: Image.asset(
+                      "assets/bottom/$index.png",
+                      height: 56,
+                      width: 56,
                     ),
+                    activeIcon: Image.asset(
+                      "assets/bottom/$index$index.png",
+                      height: 59,
+                      width: 59,
+                    ),
+                    label: "",
                   ),
-                )),
-          ],
-        ),
+                ),
+              )),
+        ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

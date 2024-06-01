@@ -110,7 +110,7 @@ class _CreateMailState extends State<CreateMail> {
             children: [
               Image.asset("assets/common/tips.png"),
               RotationTransition(
-                  turns: new AlwaysStoppedAnimation(-5 / 360),
+                  turns: const AlwaysStoppedAnimation(-5 / 360),
                   child: Container(
                     decoration: BoxDecoration(
                         color: const Color(0xFF8E8E93),

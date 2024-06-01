@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interview_dinjan/screens/mail_setting.dart';
 import 'package:interview_dinjan/screens/mailbox.dart';
 import 'package:interview_dinjan/screens/showmail.dart';
 
@@ -8,7 +7,7 @@ class HomeScreenController extends GetxController {
   RxInt index = 0.obs;
   RxList screens = [
     MailBoxScreen(),
-    ShowMail(),
+    const ShowMail(),
   ].obs;
 
   void showActionSheet(BuildContext context) {
@@ -17,7 +16,7 @@ class HomeScreenController extends GetxController {
         builder: (BuildContext bc) {
           return Wrap(
             children: <Widget>[
-              ListTile(contentPadding: EdgeInsets.all(16),
+              ListTile(contentPadding: const EdgeInsets.all(16),
                 
                 title: const Text('What time each day?',
                     style: TextStyle(

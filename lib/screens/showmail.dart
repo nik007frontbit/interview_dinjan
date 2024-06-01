@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:interview_dinjan/getx/show_maails.dart';
 
 class ShowMail extends StatefulWidget {
-  ShowMail({super.key});
+  const ShowMail({super.key});
 
   @override
   State<ShowMail> createState() => _ShowMailState();
